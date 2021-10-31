@@ -11,16 +11,21 @@ function App() {
     setQuestions(question)
   }
 
-  function addNewQuestion(question){
-    setQuestions(...questions, question)
+  function handleDeleteQuestion(deletedItem) {
+    const updatedQuestions = questions.filter((question) => question.id !== deletedItem.id);
+    setQuestions(updatedQuestions);
   }
 
-  console.log(questions)
+  function addNewQuestion(question){
+    setQuestions([...questions, question])
+  }
+
+  // console.log(questions)
 
   return (
     <main>
       <AdminNavBar onChangePage={setPage} />
-      {page === "Form" ? <QuestionForm addQuestion={addNewQuestion} setPage={setPage}/> : <QuestionList questions={questions} getQuestions={handleQuestions} page={page}/>}
+      {page === "Form" ? <QuestionForm addQuestion={addNewQuestion} setPage={setPage}/> : <QuestionList questions={questions} getQuestions={handleQuestions} onDelete={handleDeleteQuestion}/>}
     </main>
   );
 }

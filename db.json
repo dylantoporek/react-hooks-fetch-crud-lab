@@ -120,28 +120,6 @@
       ],
       "correctIndex": "3",
       "id": 11
-    },
-    {
-      "prompt": "toast?",
-      "answers": [
-        "yes please",
-        "only with jam and butter",
-        "what?",
-        "16"
-      ],
-      "correctIndex": "2",
-      "id": 12
-    },
-    {
-      "prompt": "",
-      "answers": [
-        "",
-        "",
-        "",
-        ""
-      ],
-      "correctIndex": 0,
-      "id": 13
     }
   ]
 }
